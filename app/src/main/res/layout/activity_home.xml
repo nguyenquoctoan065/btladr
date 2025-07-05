@@ -119,12 +119,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/tabAll"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Tất cả"
-                        android:background="@drawable/tab_active"
+                        android:backgroundTint="#FF6B35"
                         android:textColor="@android:color/white"
                         android:padding="8dp"
                         android:paddingStart="16dp"

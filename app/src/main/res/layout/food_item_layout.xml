@@ -2,19 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/main"
     android:orientation="horizontal"
     android:background="@drawable/food_item_background"
     android:layout_marginBottom="15dp"
     android:clickable="true"
     android:focusable="true">
 
-    <TextView
-        android:id="@+id/tvFoodEmoji"
+    <ImageView
+        android:id="@+id/ivFoodImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:textSize="32sp"
-        android:gravity="center"
-        android:background="@drawable/food_image_background" />
+        android:scaleType="centerCrop"
+        android:background="@drawable/food_image_background"
+        android:src="@drawable/pizza1"
+        android:contentDescription="Food image"/>
+
 
     <LinearLayout
         android:layout_width="0dp"
@@ -30,6 +33,7 @@
             android:textColor="#333333"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:text="Pizza Pepperoni"
             android:layout_marginBottom="5dp" />
 
         <TextView
@@ -38,6 +42,7 @@
             android:layout_height="wrap_content"
             android:textColor="#666666"
             android:textSize="12sp"
+            android:text="Pizza với xúc xích pepperoni"
             android:layout_marginBottom="5dp" />
 
         <TextView
@@ -46,7 +51,8 @@
             android:layout_height="wrap_content"
             android:textColor="#FF6B35"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:text="200.000₫"/>
 
     </LinearLayout>
 
