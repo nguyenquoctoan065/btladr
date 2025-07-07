@@ -10,5 +10,8 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="error">#F44336</color>
+    <color name="rating_color">#FFC107</color>
+
+
 
 </resources>
