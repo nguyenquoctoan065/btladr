@@ -188,6 +188,7 @@
 
     <!-- Main Content -->
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -260,6 +261,71 @@
                             android:text="Tráng miệng" />
                     </com.google.android.material.chip.ChipGroup>
                 </HorizontalScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Recent Orders Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/activeOrderCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_delivery"
+                        android:padding="8dp"
+                        android:background="@drawable/circle_primary_light"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đơn hàng đang giao"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvActiveOrderStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đơn #1234 - Đang giao hàng"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnViewActiveOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Xem"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground" />
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <!-- Popular Items Section -->
@@ -366,5 +432,17 @@
         android:background="@android:color/white"
         app:itemIconTint="#FF6B35"
         app:itemTextColor="#FF6B35" />
+
+    <!-- Floating Cart Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="72dp"
+        android:src="@drawable/ic_cart"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/primary_color" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Hình ảnh món ăn -->
+        <ImageView
+            android:id="@+id/ivFoodImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@color/primary_color"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Thông tin món ăn -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFoodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hamburger Đặc Biệt"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFoodOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Size: Lớn, Combo: Đầy đủ"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Giá và số lượng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tvItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100.000₫"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Điều chỉnh số lượng -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnDecrease"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_minus"
+                        android:background="@drawable/circle_button_bg"
+                        android:padding="4dp"
+                        app:tint="@color/primary_color" />
+
+                    <TextView
+                        android:id="@+id/tvQuantity"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <ImageButton
+                        android:id="@+id/btnIncrease"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_plus"
+                        android:background="@drawable/circle_button_bg"
+                        android:padding="4dp"
+                        app:tint="@color/primary_color" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Nút xóa -->
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|end"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginStart="8dp"
+            app:tint="@color/text_secondary" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

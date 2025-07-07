@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hình ảnh danh mục -->
+        <ImageView
+            android:id="@+id/ivCategoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@color/primary_color" />
+
+        <!-- Tên danh mục -->
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Món ăn nhanh"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="12dp" />
+
+        <!-- Badge số lượng món ăn -->
+        <TextView
+            android:id="@+id/tvItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 món"
+            android:textColor="@android:color/white"
+            android:background="@drawable/count_badge_bg"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textSize="12sp"
+            android:layout_margin="12dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-40dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

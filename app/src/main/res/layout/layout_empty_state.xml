@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/ivEmptyStateIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_empty_cart"
+        app:tint="@color/text_secondary"
+        android:alpha="0.5"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvEmptyStateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giỏ hàng trống"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvEmptyStateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn chưa thêm món ăn nào vào giỏ hàng."
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmptyStateAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiếp tục mua sắm"
+        android:textAllCaps="false"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:backgroundTint="@color/primary_color" />
+</LinearLayout>
