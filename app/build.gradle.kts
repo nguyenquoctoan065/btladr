@@ -35,6 +35,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     // Glide để tải và hiển thị hình ảnh từ URL
     implementation ("com.github.bumptech.glide:glide:4.14.2")
+    implementation(libs.gridlayout)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
     implementation(libs.appcompat)
     implementation(libs.material)
